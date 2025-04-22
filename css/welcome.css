@@ -1,0 +1,85 @@
+/* Base & Typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #1a1a1a, #333333);
+  color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.welcome-container {
+  width: 100%;
+  text-align: center;
+}
+.welcome-header {
+  padding: 20px;
+}
+.welcome-header h1 {
+  font-size: 6rem;
+  margin-bottom: 20px;
+  color: #faae16;
+  animation: fadeInScale 1.5s ease-in-out, colorShift 3s infinite alternate;
+}
+
+/* Animation to fade in and scale up */
+@keyframes fadeInScale {
+  0% {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+  100% {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+/* Subtle color shifting animation */
+@keyframes colorShift {
+  0% {
+      color: #faae16;
+  }
+  100% {
+      color: #faae16;
+  }
+}
+
+.welcome-header p {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+.btn {
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: background 0.3s, transform 0.3s;
+}
+.btn-primary {
+  background: #faae16;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #faae16;
+  transform: scale(1.05);
+}
+.welcome-footer {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .welcome-header h1 {
+    font-size: 2.5rem;
+  }
+  .welcome-header p {
+    font-size: 1.2rem;
+  }
+}
